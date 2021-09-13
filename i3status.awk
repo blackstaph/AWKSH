@@ -267,13 +267,13 @@ BEGIN {
     do {
         stanza_line = "["
         value =  get_fs("/$")
-        sub(/$/,check_xscreensaver(),stanza_line)   #append return value
-        sub(/$/,check_mate(),stanza_line)           #append return value
+        #sub(/$/,check_xscreensaver(),stanza_line)   #append return value
+        #sub(/$/,check_mate(),stanza_line)           #append return value
         #sub(/$/,get_fs("/$"),stanza_line)           #append return value
-        sub(/$/,get_zfs("zroot"),stanza_line)           #append return value
-        sub(/$/,get_ip("lagg0"),stanza_line)        #append return value
-        sub(/$/,check_brightness(),stanza_line)        #append return value   
-        sub(/$/,check_power(),stanza_line)        #append return value   
+        #sub(/$/,get_zfs("zroot"),stanza_line)           #append return value
+        #sub(/$/,get_ip("lagg0"),stanza_line)        #append return value
+        #sub(/$/,check_brightness(),stanza_line)        #append return value   
+        #sub(/$/,check_power(),stanza_line)        #append return value   
         sub(/$/,clock(),stanza_line)                #append return value   
         sub(/[,]$/,"],",stanza_line) #remove trailing comma before entry end
         print stanza_line

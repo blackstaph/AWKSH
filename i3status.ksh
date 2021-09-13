@@ -304,9 +304,9 @@ typeset -T status_module=(
 ###############################################################################
 
 status_module time_module=( disabled=0 interval=1 concurrent=0 stanza[name]="time" stanza[instance]="time" )
-status_module zfs_tank_module=( disabled=1 concurrent=0 stanza[name]="tank\/" stanza[instance]="tank" interval=20 ) 
-status_module em0_module=( disabled=1 concurrent=0 stanza[name]="nic:em0" interval=5 )
-status_module wlan0_module=( disabled=1 concurrent=0 interval=1 stanza[color]=${_.COLORS[RED]} stanza[name]="wlan0" )
+status_module zfs_tank_module=( disabled=1 concurrent=1 stanza[name]="tank\/" stanza[instance]="tank" interval=20 ) 
+status_module em0_module=( disabled=0 concurrent=1 stanza[name]="nic:em0" interval=5 )
+status_module wlan0_module=( disabled=0 concurrent=1 interval=1 stanza[color]=${_.COLORS[RED]} stanza[name]="wlan0" )
 status_module brightness_module=( disabled=0 concurrent=0 interval=1 stanza[name]="brightness" stanza[instance]="brightness" )
 status_module power_module=( disabled=0 concurrent=0 interval=2 stanza[name]="power" stanza[instance]="power" )
 status_module test_module=( disabled=0 concurrent=0 interval=2 stanza[name]="test00" stanza[instance]="test00 0x00")
